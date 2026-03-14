@@ -91,7 +91,6 @@ a{color:inherit}
   font-size:30px;
   line-height:1.02;
   font-weight:800;
-  max-width:11ch;
 }
 .lede{
   margin:0 0 18px;
@@ -223,6 +222,7 @@ a{color:inherit}
   display:grid;
   grid-template-columns:repeat(2, minmax(0,1fr));
   gap:24px;
+  max-width:680px;
 }
 .book-card{
   border:1px solid var(--border);
