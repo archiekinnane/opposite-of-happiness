@@ -281,26 +281,6 @@ a{color:inherit}
   font-size:16px;
   line-height:1.6;
 }
-.retailer-links{
-  margin-top:14px;
-  padding-top:14px;
-  border-top:1px solid var(--border);
-  line-height:2;
-}
-.retailer-link{
-  font-size:14px;
-  text-decoration:none;
-  color:var(--accent);
-  transition:color .14s ease;
-}
-.retailer-link+.retailer-link::before{
-  content:'· ';
-  color:var(--border);
-  margin-right:2px;
-}
-.retailer-link:hover{
-  color:var(--text);
-}
 
 .gallery{
   display:grid;
