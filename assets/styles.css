@@ -254,7 +254,7 @@ a{color:inherit}
 .retailer-links{
   display:flex;
   flex-wrap:wrap;
-  gap:0;
+  gap:6px 16px;
   margin-top:14px;
   padding-top:14px;
   border-top:1px solid var(--border);
@@ -265,12 +265,6 @@ a{color:inherit}
   font-weight:700;
   font-size:14px;
   letter-spacing:.02em;
-}
-.retailer-link+.retailer-link::before{
-  content:'·';
-  padding:0 8px;
-  color:var(--muted);
-  font-weight:400;
 }
 .retailer-link:hover{text-decoration:underline}
 
