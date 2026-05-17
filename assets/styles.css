@@ -71,6 +71,7 @@ a{color:inherit}
   border:1px solid var(--text);
 }
 
+/* HERO */
 .hero{padding:40px 0 56px}
 .hero-grid{
   display:grid;
@@ -80,7 +81,7 @@ a{color:inherit}
 }
 .title{
   margin:0 0 14px;
-  font-size:clamp(64px, 8vw, 110px);
+  font-size:clamp(44px, 6vw, 82px);
   line-height:.92;
   font-weight:900;
   letter-spacing:-.05em;
@@ -115,13 +116,18 @@ a{color:inherit}
   text-transform:uppercase;
   letter-spacing:.05em;
   font-weight:800;
+  font-size:13px;
+  transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease, border-color .14s ease;
 }
 .btn.primary{
   background:var(--accent);
   border-color:var(--accent);
   color:#fff;
 }
-.btn:hover{transform:translateY(-1px)}
+.btn:hover{
+  transform:translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
 .caption{
   margin-top:10px;
   font-size:13px;
@@ -133,6 +139,12 @@ a{color:inherit}
   background:#fff;
   padding:18px;
   box-shadow:0 18px 40px rgba(0,0,0,.06);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.cover-frame:hover,
+.panel:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 24px 48px rgba(0,0,0,.1);
 }
 .section{padding:24px 0 80px}
 .section-header{
@@ -200,6 +212,7 @@ a{color:inherit}
   background:var(--soft);
   padding:16px;
   text-decoration:none;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
 .link-card span{display:block}
 .link-card .small{
@@ -216,6 +229,8 @@ a{color:inherit}
 .link-card:hover{
   border-color:var(--accent);
   color:var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
 }
 
 .books-grid{
@@ -268,13 +283,6 @@ a{color:inherit}
 }
 .retailer-link:hover{text-decoration:underline}
 
-.hero-buy{
-  margin-top:28px;
-  padding-top:22px;
-  border-top:1px solid var(--border);
-}
-.hero-buy .kicker{margin-bottom:10px}
-
 .book-info p{
   margin:0;
   color:var(--muted);
@@ -304,7 +312,7 @@ a{color:inherit}
 }
 
 .footer{
-  margin-top:40px;
+  margin-top:0;
   background:#000;
   color:#fff;
   padding:26px 0;
@@ -318,56 +326,166 @@ a{color:inherit}
   font-size:14px;
 }
 
+/* =============================================
+   HOME: PRAISE SECTION
+   ============================================= */
+.praise-section{
+  padding:0 0 64px;
+}
+.praise-heading{
+  text-align:center;
+  padding:48px 0 36px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:28px;
+}
+.praise-kicker{
+  font-size:clamp(22px, 3vw, 38px);
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.praise-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:16px;
+}
+.praise-card{
+  display:block;
+  text-decoration:none;
+  color:var(--text);
+  background:var(--soft);
+  border:1px solid var(--border);
+  padding:28px 24px 22px;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.praise-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px rgba(0,0,0,.07);
+  border-color:var(--accent);
+}
+.praise-quote{
+  margin:0 0 16px;
+  padding:0;
+  font-size:17px;
+  font-style:italic;
+  line-height:1.68;
+  color:var(--text);
+  font-family:var(--font);
+}
+.praise-attr{
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--muted);
+  font-style:normal;
+  font-family:var(--font);
+}
+.praise-title{
+  font-weight:400;
+  text-transform:none;
+  letter-spacing:0;
+}
+
+/* =============================================
+   HOME: BUY SECTION
+   ============================================= */
+.buy-section{
+  padding:52px 0;
+  background:var(--soft);
+  border-top:1px solid var(--border);
+}
+.buy-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  flex-wrap:wrap;
+}
+.buy-left .kicker{margin-bottom:6px}
+.buy-title{
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:-.03em;
+  text-transform:uppercase;
+}
+.buy-links{
+  border-top:none;
+  margin-top:0;
+  padding-top:0;
+  gap:8px 20px;
+}
+.buy-links .retailer-link{
+  font-size:15px;
+}
+
+/* =============================================
+   ENDORSEMENTS PAGE
+   ============================================= */
+.end-list{
+  display:flex;
+  flex-direction:column;
+}
+.end-item{
+  padding:36px 0;
+  border-bottom:1px solid var(--border);
+}
+.end-item:first-child{
+  padding-top:8px;
+}
+.end-quote{
+  margin:0 0 14px;
+  padding:0;
+  font-size:clamp(17px, 1.8vw, 22px);
+  font-style:italic;
+  font-weight:500;
+  line-height:1.6;
+  color:var(--text);
+  font-family:var(--font);
+  letter-spacing:-.01em;
+}
+.end-cite{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-style:normal;
+  font-family:var(--font);
+}
+.end-cite em{
+  font-style:italic;
+  text-transform:none;
+  letter-spacing:0;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
 @media (max-width: 980px){
   .hero-grid,
   .author-layout,
   .books-grid,
-  .gallery{
+  .gallery,
+  .praise-grid{
     grid-template-columns:1fr;
   }
-  .tile.tall{
-    grid-row:auto;
-    min-height:260px;
-  }
+  .tile.tall{grid-row:auto; min-height:260px}
   .subtitle{max-width:none}
   .link-grid{grid-template-columns:1fr}
+  .buy-inner{flex-direction:column; align-items:flex-start}
+  .hero{padding:28px 0 44px}
 }
-
 @media (max-width: 640px){
   .container{width:min(var(--max), calc(100% - 32px))}
-  .nav{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+  .nav{flex-direction:column; align-items:flex-start}
   .navlinks{gap:14px}
   .title{font-size:56px}
   .subtitle{font-size:24px}
+  .praise-quote{font-size:15px}
+  .section-header{flex-direction:column; align-items:flex-start}
 }
 
-
-/* polish pass */
-.btn{
-  transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease, border-color .14s ease;
-}
-.btn:hover{
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-}
-.cover-frame,
-.panel,
-.link-card{
-  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-}
-.cover-frame:hover,
-.panel:hover,
-.link-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 18px 34px rgba(0,0,0,.08);
-}
-.title,
-.h2,
-.brand{
-  text-wrap: balance;
-}
-@media (max-width: 980px){
-  .hero{padding:28px 0 44px}
-}
+.title,.h2,.brand{text-wrap:balance}
