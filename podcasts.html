@@ -4,27 +4,95 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Podcasts — The Opposite of Happiness</title>
+  <title>Podcasts &amp; Features — The Opposite of Happiness</title>
 
   <meta
     name="description"
-    content="Podcast conversations featuring George Loewenstein and The Opposite of Happiness.">
+    content="Podcast conversations, videos, and writing featuring George Loewenstein and The Opposite of Happiness."
+  >
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Podcasts — The Opposite of Happiness">
+  <meta
+    property="og:title"
+    content="Podcasts &amp; Features — The Opposite of Happiness"
+  >
   <meta
     property="og:description"
-    content="Podcast conversations featuring George Loewenstein and The Opposite of Happiness.">
+    content="Podcast conversations, videos, and writing featuring George Loewenstein and The Opposite of Happiness."
+  >
   <meta property="og:image" content="assets/images/cover.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Podcasts — The Opposite of Happiness">
+  <meta
+    name="twitter:title"
+    content="Podcasts &amp; Features — The Opposite of Happiness"
+  >
   <meta
     name="twitter:description"
-    content="Podcast conversations featuring George Loewenstein and The Opposite of Happiness.">
+    content="Podcast conversations, videos, and writing featuring George Loewenstein and The Opposite of Happiness."
+  >
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    .feature-stack {
+      display: grid;
+      gap: 28px;
+    }
+
+    .essay-cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 290px;
+      padding: clamp(26px, 4vw, 42px);
+      color: #fff;
+      background: #111;
+      border: 1px solid #111;
+      text-decoration: none;
+      transition:
+        transform .16s ease,
+        box-shadow .16s ease,
+        background-color .16s ease;
+    }
+
+    .essay-cover:hover {
+      transform: translateY(-2px);
+      background: #8b0000;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .14);
+    }
+
+    .essay-cover-source {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .essay-cover-title {
+      display: block;
+      max-width: 8ch;
+      margin: 38px 0;
+      font-size: clamp(38px, 6vw, 66px);
+      font-weight: 900;
+      line-height: .92;
+      letter-spacing: -.05em;
+      text-transform: uppercase;
+    }
+
+    .essay-cover-byline {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 640px) {
+      .essay-cover {
+        min-height: 250px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -32,27 +100,27 @@
 <header class="header">
   <div class="container">
     <nav class="nav" aria-label="Primary">
-
       <a class="brand" href="index.html">
         The Opposite of<br>Happiness
       </a>
 
       <div class="navlinks">
-               <a data-nav href="index.html">Home</a>
+        <a data-nav href="index.html">Home</a>
         <a data-nav href="about-the-author.html">About the Author</a>
-               <a data-nav href="books.html">Books</a>
-        <a data-nav href="endorsements.html">Endorsements</a                                    <a data-nav href="podcasts.html">Podcasts</a>
+        <a data-nav href="books.html">Books</a>
+        <a data-nav href="endorsements.html">Endorsements</a>
+        <a data-nav href="podcasts.html">Podcasts &amp; Features</a>
         <a data-nav href="misery-survey-results.html">Survey Results</a>
 
         <a
           class="cta-nav"
           href="https://cmu.ca1.qualtrics.com/jfe/form/SV_4It6OBu610P4zIi"
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           Take Misery Survey
         </a>
       </div>
-
     </nav>
   </div>
 </header>
@@ -62,67 +130,111 @@
 
     <div class="section-header">
       <div>
-        <div class="kicker">Listen</div>
-        <h1 class="h2">Podcasts</h1>
+        <div class="kicker">Listen and read</div>
+        <h1 class="h2">Podcasts &amp; Features</h1>
       </div>
     </div>
 
-    <article class="podcast-feature">
+    <div class="feature-stack">
 
-      <div class="podcast-details">
-        <div class="podcast-kicker">Featured Conversation</div>
+      <article class="podcast-feature">
+        <div class="podcast-details">
+          <div class="podcast-kicker">Featured conversation</div>
 
-        <h2>The Hidden Power of Negative Emotions</h2>
+          <h2>The Hidden Power of Negative Emotions</h2>
 
-        <p>
-          George Loewenstein explores how negative emotions influence memory,
-          judgment, behavior, and our understanding of ourselves.
-        </p>
-      </div>
+          <p>
+            George Loewenstein explores how negative emotions influence
+            memory, judgment, behavior, and our understanding of ourselves.
+          </p>
 
-      <a
-        class="podcast-cover"
-        href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
-        target="_blank"
-        rel="noopener"
-        aria-label="Watch The Hidden Power of Negative Emotions on YouTube">
+          <a
+            class="podcast-watch"
+            href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
+            target="_blank"
+            rel="noopener"
+          >
+            Watch on YouTube →
+          </a>
+        </div>
 
-        <img
-          src="https://i.ytimg.com/vi_webp/BXgk4e7wKTk/maxresdefault.webp"
-          alt="The Hidden Power of Negative Emotions with George Loewenstein"
-          loading="lazy">
+        <a
+          class="podcast-cover"
+          href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
+          target="_blank"
+          rel="noopener"
+          aria-label="Watch The Hidden Power of Negative Emotions on YouTube"
+        >
+          <img
+            src="https://i.ytimg.com/vi_webp/BXgk4e7wKTk/maxresdefault.webp"
+            alt="Video thumbnail for The Hidden Power of Negative Emotions"
+          >
 
-        <span class="podcast-play" aria-hidden="true">
-          <span></span>
-        </span>
-      </a>
+          <span class="podcast-play" aria-hidden="true">▶</span>
+        </a>
+      </article>
 
-      <a
-        class="podcast-watch"
-        href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
-        target="_blank"
-        rel="noopener">
-        Watch on YouTube →
-      </a>
+      <article class="podcast-feature">
+        <div class="podcast-details">
+          <div class="podcast-kicker">Featured essay</div>
 
-    </article>
+          <h2>Bad Feelings</h2>
+
+          <p>
+            Derek Thompson and George Loewenstein examine what negative
+            emotions can reveal and what changes when we listen to them
+            instead of trying to banish them.
+          </p>
+
+          <p class="podcast-meta">
+            Derek Thompson and George Loewenstein<br>
+            September 14, 2026
+          </p>
+
+          <a
+            class="podcast-watch"
+            href="https://www.derekthompson.org/p/your-bad-feelings-are-telling-you"
+            target="_blank"
+            rel="noopener"
+          >
+            Read the Essay →
+          </a>
+        </div>
+
+        <a
+          class="essay-cover"
+          href="https://www.derekthompson.org/p/your-bad-feelings-are-telling-you"
+          target="_blank"
+          rel="noopener"
+          aria-label="Read Bad Feelings by Derek Thompson and George Loewenstein"
+        >
+          <span class="essay-cover-source">Derek Thompson</span>
+
+          <span class="essay-cover-title">Bad Feelings</span>
+
+          <span class="essay-cover-byline">
+            Derek Thompson<br>
+            and George Loewenstein
+          </span>
+        </a>
+      </article>
+
+    </div>
 
     <aside class="podcast-upcoming">
-
       <div>
-        <div class="kicker">Continue Listening</div>
+        <div class="podcast-upcoming-label">More coming soon</div>
 
-        <h2>More Conversations Coming Soon</h2>
+        <h2>More conversations and writing</h2>
 
         <p>
-          Additional podcast appearances and conversations about
-          <em>The Opposite of Happiness</em> will be added here as they
+          Additional podcast appearances, videos, essays, and conversations
+          about <em>The Opposite of Happiness</em> will be added here as they
           become available.
         </p>
       </div>
 
       <div class="podcast-upcoming-mark" aria-hidden="true">♪</div>
-
     </aside>
 
   </div>
@@ -136,6 +248,5 @@
 </footer>
 
 <script src="assets/app.js"></script>
-
 </body>
 </html>
