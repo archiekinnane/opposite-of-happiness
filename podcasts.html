@@ -36,60 +36,234 @@
   <link rel="stylesheet" href="assets/styles.css">
 
   <style>
-    .feature-stack {
+    .features-grid {
       display: grid;
-      gap: 28px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
     }
 
-    .essay-cover {
+    .feature-card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      min-height: 290px;
-      padding: clamp(26px, 4vw, 42px);
-      color: #fff;
-      background: #111;
-      border: 1px solid #111;
-      text-decoration: none;
+      min-width: 0;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, .06);
       transition:
         transform .16s ease,
         box-shadow .16s ease,
+        border-color .16s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, .1);
+    }
+
+    .feature-visual {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      overflow: hidden;
+      color: inherit;
+      background: var(--soft);
+      text-decoration: none;
+    }
+
+    .video-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.12);
+    }
+
+    .feature-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      color: #fff;
+      background: var(--accent);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .28);
+      font-size: 26px;
+      line-height: 1;
+      transform: translate(-50%, -50%);
+      transition:
+        transform .16s ease,
         background-color .16s ease;
     }
 
-    .essay-cover:hover {
-      transform: translateY(-2px);
-      background: #8b0000;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, .14);
+    .video-visual:hover .feature-play {
+      background: #111;
+      transform: translate(-50%, -50%) scale(1.07);
     }
 
-    .essay-cover-source {
+    .essay-visual {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px;
+      color: #fff;
+      background: #111;
+      transition: background-color .16s ease;
+    }
+
+    .essay-visual:hover {
+      background: var(--accent);
+    }
+
+    .essay-source {
       font-size: 12px;
       font-weight: 900;
       letter-spacing: .1em;
       text-transform: uppercase;
     }
 
-    .essay-cover-title {
+    .essay-title {
       display: block;
-      max-width: 8ch;
-      margin: 38px 0;
-      font-size: clamp(38px, 6vw, 66px);
+      font-size: clamp(34px, 4vw, 52px);
       font-weight: 900;
       line-height: .92;
       letter-spacing: -.05em;
       text-transform: uppercase;
     }
 
-    .essay-cover-byline {
-      font-size: 14px;
+    .essay-byline {
+      font-size: 13px;
       font-weight: 700;
-      line-height: 1.4;
+      line-height: 1.35;
+    }
+
+    .feature-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 22px 4px 4px;
+    }
+
+    .feature-type {
+      margin-bottom: 9px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .feature-content h2 {
+      margin: 0;
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+    }
+
+    .feature-description {
+      margin: 14px 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .feature-meta {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .feature-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      min-height: 48px;
+      margin-top: auto;
+      padding: 14px 20px;
+      color: #fff;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition:
+        transform .14s ease,
+        box-shadow .14s ease,
+        background-color .14s ease;
+    }
+
+    .feature-button:hover {
+      background: #111;
+      border-color: #111;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .14);
+    }
+
+    .features-coming-soon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 28px;
+      padding: 22px 26px;
+      background: var(--soft);
+      border-left: 6px solid var(--accent);
+    }
+
+    .features-coming-soon h2 {
+      margin: 3px 0 0;
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+    }
+
+    .features-coming-soon p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .features-coming-soon-mark {
+      flex: 0 0 auto;
+      color: var(--accent);
+      font-size: 38px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 800px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
-      .essay-cover {
-        min-height: 250px;
+      .feature-card {
+        padding: 14px;
+      }
+
+      .essay-visual {
+        padding: 22px;
+      }
+
+      .features-coming-soon {
+        align-items: flex-start;
+        padding: 20px;
       }
     }
   </style>
@@ -135,31 +309,11 @@
       </div>
     </div>
 
-    <div class="feature-stack">
+    <div class="features-grid">
 
-      <article class="podcast-feature">
-        <div class="podcast-details">
-          <div class="podcast-kicker">Featured conversation</div>
-
-          <h2>The Hidden Power of Negative Emotions</h2>
-
-          <p>
-            George Loewenstein explores how negative emotions influence
-            memory, judgment, behavior, and our understanding of ourselves.
-          </p>
-
-          <a
-            class="podcast-watch"
-            href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
-            target="_blank"
-            rel="noopener"
-          >
-            Watch on YouTube →
-          </a>
-        </div>
-
+      <article class="feature-card">
         <a
-          class="podcast-cover"
+          class="feature-visual video-visual"
           href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
           target="_blank"
           rel="noopener"
@@ -170,29 +324,64 @@
             alt="Video thumbnail for The Hidden Power of Negative Emotions"
           >
 
-          <span class="podcast-play" aria-hidden="true">▶</span>
+          <span class="feature-play" aria-hidden="true">▶</span>
         </a>
+
+        <div class="feature-content">
+          <div class="feature-type">Featured conversation</div>
+
+          <h2>The Hidden Power of Negative Emotions</h2>
+
+          <p class="feature-description">
+            George Loewenstein explores how negative emotions influence
+            memory, judgment, behavior, and our understanding of ourselves.
+          </p>
+
+          <a
+            class="feature-button"
+            href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
+            target="_blank"
+            rel="noopener"
+          >
+            Watch on YouTube →
+          </a>
+        </div>
       </article>
 
-      <article class="podcast-feature">
-        <div class="podcast-details">
-          <div class="podcast-kicker">Featured essay</div>
+      <article class="feature-card">
+        <a
+          class="feature-visual essay-visual"
+          href="https://www.derekthompson.org/p/your-bad-feelings-are-telling-you"
+          target="_blank"
+          rel="noopener"
+          aria-label="Read Bad Feelings by Derek Thompson and George Loewenstein"
+        >
+          <span class="essay-source">Derek Thompson</span>
+
+          <span class="essay-title">Bad Feelings</span>
+
+          <span class="essay-byline">
+            Derek Thompson and George Loewenstein
+          </span>
+        </a>
+
+        <div class="feature-content">
+          <div class="feature-type">Featured essay</div>
 
           <h2>Bad Feelings</h2>
 
-          <p>
+          <p class="feature-description">
             Derek Thompson and George Loewenstein examine what negative
             emotions can reveal and what changes when we listen to them
             instead of trying to banish them.
           </p>
 
-          <p class="podcast-meta">
-            Derek Thompson and George Loewenstein<br>
-            September 14, 2026
+          <p class="feature-meta">
+            Published September 14, 2026
           </p>
 
           <a
-            class="podcast-watch"
+            class="feature-button"
             href="https://www.derekthompson.org/p/your-bad-feelings-are-telling-you"
             target="_blank"
             rel="noopener"
@@ -200,41 +389,23 @@
             Read the Essay →
           </a>
         </div>
-
-        <a
-          class="essay-cover"
-          href="https://www.derekthompson.org/p/your-bad-feelings-are-telling-you"
-          target="_blank"
-          rel="noopener"
-          aria-label="Read Bad Feelings by Derek Thompson and George Loewenstein"
-        >
-          <span class="essay-cover-source">Derek Thompson</span>
-
-          <span class="essay-cover-title">Bad Feelings</span>
-
-          <span class="essay-cover-byline">
-            Derek Thompson<br>
-            and George Loewenstein
-          </span>
-        </a>
       </article>
 
     </div>
 
-    <aside class="podcast-upcoming">
+    <aside class="features-coming-soon">
       <div>
-        <div class="podcast-upcoming-label">More coming soon</div>
+        <div class="kicker">More coming soon</div>
 
         <h2>More conversations and writing</h2>
 
         <p>
           Additional podcast appearances, videos, essays, and conversations
-          about <em>The Opposite of Happiness</em> will be added here as they
-          become available.
+          will be added here as they become available.
         </p>
       </div>
 
-      <div class="podcast-upcoming-mark" aria-hidden="true">♪</div>
+      <div class="features-coming-soon-mark" aria-hidden="true">♪</div>
     </aside>
 
   </div>
