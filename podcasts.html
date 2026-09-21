@@ -6,267 +6,19 @@
 
   <title>Podcasts &amp; Features — The Opposite of Happiness</title>
 
-  <meta
-    name="description"
-    content="Podcast conversations, videos, and writing featuring George Loewenstein and The Opposite of Happiness."
-  >
+  <meta name="description" content="Videos, conversations, essays, and features about George Loewenstein and The Opposite of Happiness.">
 
   <meta property="og:type" content="website">
-  <meta
-    property="og:title"
-    content="Podcasts &amp; Features — The Opposite of Happiness"
-  >
-  <meta
-    property="og:description"
-    content="Podcast conversations, videos, and writing featuring George Loewenstein and The Opposite of Happiness."
-  >
+  <meta property="og:title" content="Podcasts &amp; Features — The Opposite of Happiness">
+  <meta property="og:description" content="Videos, conversations, essays, and features about George Loewenstein and The Opposite of Happiness.">
   <meta property="og:image" content="assets/images/cover.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta
-    name="twitter:title"
-    content="Podcasts &amp; Features — The Opposite of Happiness"
-  >
-  <meta
-    name="twitter:description"
-    content="Podcast conversations, videos, and writing featuring George Loewenstein and The Opposite of Happiness."
-  >
+  <meta name="twitter:title" content="Podcasts &amp; Features — The Opposite of Happiness">
+  <meta name="twitter:description" content="Videos, conversations, essays, and features about George Loewenstein and The Opposite of Happiness.">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .feature-card {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      padding: 18px;
-      background: #fff;
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, .06);
-      transition:
-        transform .16s ease,
-        box-shadow .16s ease,
-        border-color .16s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: 0 22px 44px rgba(0, 0, 0, .1);
-    }
-
-    .feature-visual {
-      position: relative;
-      display: block;
-      width: 100%;
-      aspect-ratio: 2 / 1;
-      overflow: hidden;
-      color: inherit;
-      background: var(--soft);
-      text-decoration: none;
-    }
-
-    .video-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.12);
-    }
-
-    .feature-play {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: grid;
-      place-items: center;
-      width: 68px;
-      height: 68px;
-      color: #fff;
-      background: var(--accent);
-      border: 3px solid #fff;
-      border-radius: 50%;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .28);
-      font-size: 26px;
-      line-height: 1;
-      transform: translate(-50%, -50%);
-      transition:
-        transform .16s ease,
-        background-color .16s ease;
-    }
-
-    .video-visual:hover .feature-play {
-      background: #111;
-      transform: translate(-50%, -50%) scale(1.07);
-    }
-
-    .essay-visual {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 26px;
-      color: #fff;
-      background: #111;
-      transition: background-color .16s ease;
-    }
-
-    .essay-visual:hover {
-      background: var(--accent);
-    }
-
-    .essay-source {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .essay-title {
-      display: block;
-      font-size: clamp(34px, 4vw, 52px);
-      font-weight: 900;
-      line-height: .92;
-      letter-spacing: -.05em;
-      text-transform: uppercase;
-    }
-
-    .essay-byline {
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .feature-content {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      padding: 22px 4px 4px;
-    }
-
-    .feature-type {
-      margin-bottom: 9px;
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .feature-content h2 {
-      margin: 0;
-      font-size: clamp(25px, 3vw, 36px);
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: -.035em;
-      text-transform: uppercase;
-    }
-
-    .feature-description {
-      margin: 14px 0 18px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.55;
-    }
-
-    .feature-meta {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.45;
-    }
-
-    .feature-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      align-self: flex-start;
-      min-height: 48px;
-      margin-top: auto;
-      padding: 14px 20px;
-      color: #fff;
-      background: var(--accent);
-      border: 1px solid var(--accent);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      transition:
-        transform .14s ease,
-        box-shadow .14s ease,
-        background-color .14s ease;
-    }
-
-    .feature-button:hover {
-      background: #111;
-      border-color: #111;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, .14);
-    }
-
-    .features-coming-soon {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      margin-top: 28px;
-      padding: 22px 26px;
-      background: var(--soft);
-      border-left: 6px solid var(--accent);
-    }
-
-    .features-coming-soon h2 {
-      margin: 3px 0 0;
-      font-size: 22px;
-      line-height: 1.1;
-      font-weight: 900;
-      letter-spacing: -.02em;
-      text-transform: uppercase;
-    }
-
-    .features-coming-soon p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    .features-coming-soon-mark {
-      flex: 0 0 auto;
-      color: var(--accent);
-      font-size: 38px;
-      font-weight: 900;
-    }
-
-    @media (max-width: 800px) {
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .feature-card {
-        padding: 14px;
-      }
-
-      .essay-visual {
-        padding: 22px;
-      }
-
-      .features-coming-soon {
-        align-items: flex-start;
-        padding: 20px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -274,6 +26,7 @@
 <header class="header">
   <div class="container">
     <nav class="nav" aria-label="Primary">
+
       <a class="brand" href="index.html">
         The Opposite of<br>Happiness
       </a>
@@ -295,6 +48,7 @@
           Take Misery Survey
         </a>
       </div>
+
     </nav>
   </div>
 </header>
@@ -302,18 +56,23 @@
 <main class="section podcasts-page">
   <div class="container">
 
-    <div class="section-header">
+    <div class="section-header features-heading">
       <div>
         <div class="kicker">Listen and read</div>
         <h1 class="h2">Podcasts &amp; Features</h1>
       </div>
     </div>
 
-    <div class="features-grid">
+    <section
+      class="features-grid"
+      aria-label="Featured conversations and writing"
+    >
 
+      <!-- YOUTUBE VIDEO -->
       <article class="feature-card">
+
         <a
-          class="feature-visual video-visual"
+          class="feature-media video-media"
           href="https://www.youtube.com/watch?v=BXgk4e7wKTk"
           target="_blank"
           rel="noopener"
@@ -321,10 +80,12 @@
         >
           <img
             src="https://i.ytimg.com/vi_webp/BXgk4e7wKTk/maxresdefault.webp"
-            alt="Video thumbnail for The Hidden Power of Negative Emotions"
+            alt="The Hidden Power of Negative Emotions with George Loewenstein"
           >
 
-          <span class="feature-play" aria-hidden="true">▶</span>
+          <span class="feature-play" aria-hidden="true">
+            <span></span>
+          </span>
         </a>
 
         <div class="feature-content">
@@ -332,7 +93,7 @@
 
           <h2>The Hidden Power of Negative Emotions</h2>
 
-          <p class="feature-description">
+          <p>
             George Loewenstein explores how negative emotions influence
             memory, judgment, behavior, and our understanding of ourselves.
           </p>
@@ -346,22 +107,28 @@
             Watch on YouTube →
           </a>
         </div>
+
       </article>
 
+      <!-- DEREK THOMPSON ESSAY -->
       <article class="feature-card">
+
         <a
-          class="feature-visual essay-visual"
+          class="feature-media essay-media"
           href="https://www.derekthompson.org/p/your-bad-feelings-are-telling-you"
           target="_blank"
           rel="noopener"
           aria-label="Read Bad Feelings by Derek Thompson and George Loewenstein"
         >
-          <span class="essay-source">Derek Thompson</span>
+          <span class="feature-publication">Derek Thompson</span>
 
-          <span class="essay-title">Bad Feelings</span>
+          <span class="feature-cover-title">
+            Bad Feelings
+          </span>
 
-          <span class="essay-byline">
-            Derek Thompson and George Loewenstein
+          <span class="feature-cover-byline">
+            Derek Thompson<br>
+            and George Loewenstein
           </span>
         </a>
 
@@ -370,15 +137,12 @@
 
           <h2>Bad Feelings</h2>
 
-          <p class="feature-description">
-            Derek Thompson and George Loewenstein examine what negative
-            emotions can reveal and what changes when we listen to them
-            instead of trying to banish them.
+          <p>
+            Derek Thompson and George Loewenstein examine why negative
+            feelings deserve attention rather than judgment.
           </p>
 
-          <p class="feature-meta">
-            Published September 14, 2026
-          </p>
+          <div class="feature-meta">September 14, 2026</div>
 
           <a
             class="feature-button"
@@ -389,23 +153,73 @@
             Read the Essay →
           </a>
         </div>
+
       </article>
 
-    </div>
+      <!-- BIG THINK FEATURE -->
+      <article class="feature-card">
 
-    <aside class="features-coming-soon">
+        <a
+          class="feature-media bigthink-media"
+          href="https://bigthink.com/books/the-opposite-of-happiness/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Read Misery is an emotional feature, not a glitch in the system on Big Think"
+        >
+          <img
+            src="assets/images/cover.jpg"
+            alt="The Opposite of Happiness book cover"
+          >
+
+          <span class="bigthink-cover-copy">
+            <span class="feature-publication">Big Think</span>
+
+            <span class="bigthink-cover-title">
+              An excerpt from<br>
+              <em>The Opposite of Happiness</em>
+            </span>
+          </span>
+        </a>
+
+        <div class="feature-content">
+          <div class="feature-type">Featured excerpt</div>
+
+          <h2>Misery Is an Emotional Feature, Not a Glitch</h2>
+
+          <p>
+            George Loewenstein explains why evolution shaped our emotions
+            to keep us alive, not necessarily to keep us happy.
+          </p>
+
+          <div class="feature-meta">September 15, 2026</div>
+
+          <a
+            class="feature-button"
+            href="https://bigthink.com/books/the-opposite-of-happiness/"
+            target="_blank"
+            rel="noopener"
+          >
+            Read on Big Think →
+          </a>
+        </div>
+
+      </article>
+
+    </section>
+
+    <aside class="features-upcoming">
       <div>
         <div class="kicker">More coming soon</div>
 
         <h2>More conversations and writing</h2>
 
         <p>
-          Additional podcast appearances, videos, essays, and conversations
+          Additional podcast appearances, videos, essays, and features
           will be added here as they become available.
         </p>
       </div>
 
-      <div class="features-coming-soon-mark" aria-hidden="true">♪</div>
+      <div class="features-upcoming-mark" aria-hidden="true">♪</div>
     </aside>
 
   </div>
@@ -419,5 +233,6 @@
 </footer>
 
 <script src="assets/app.js"></script>
+
 </body>
 </html>
