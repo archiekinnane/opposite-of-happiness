@@ -19,143 +19,6 @@
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /*
-      These styles specifically correct the feature-card sizing
-      without changing the appearance of the other website pages.
-    */
-
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
-      gap:20px;
-      align-items:stretch;
-    }
-
-    .feature-media{
-      min-width:0;
-    }
-
-    .essay-media{
-      justify-content:space-between;
-    }
-
-    .feature-cover-title{
-      max-width:100%;
-      font-size:clamp(27px, 2.5vw, 38px);
-      line-height:.9;
-      overflow-wrap:anywhere;
-    }
-
-    .feature-cover-label{
-      font-size:10px;
-      font-weight:900;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .bigthink-media{
-      grid-template-columns:minmax(62px,.72fr) minmax(0,1.28fr);
-    }
-
-    .bigthink-cover-copy{
-      min-width:0;
-    }
-
-    .bigthink-cover-title{
-      font-size:clamp(15px, 1.35vw, 20px);
-      line-height:1.05;
-      text-transform:uppercase;
-      overflow-wrap:anywhere;
-    }
-
-    .psychologist-media{
-      position:relative;
-      flex-direction:column;
-      justify-content:flex-end;
-      padding:22px;
-      color:#fff;
-      background:#8b0000;
-    }
-
-    .psychologist-media:hover{
-      background:#650000;
-    }
-
-    .psychologist-brand{
-      position:absolute;
-      top:20px;
-      right:22px;
-      left:22px;
-      padding-bottom:10px;
-      border-bottom:1px solid rgba(255,255,255,.5);
-      font-size:10px;
-      font-weight:900;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .psychologist-topic{
-      margin-bottom:7px;
-      color:#f4c7c7;
-      font-size:10px;
-      font-weight:900;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-    }
-
-    .psychologist-cover-title{
-      max-width:calc(100% - 30px);
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(29px, 2.8vw, 42px);
-      font-weight:700;
-      line-height:.92;
-      letter-spacing:-.04em;
-      overflow-wrap:anywhere;
-    }
-
-    .psychologist-arrow{
-      position:absolute;
-      right:20px;
-      bottom:17px;
-      font-size:22px;
-      line-height:1;
-    }
-
-    /*
-      Switches to two columns before the cards become narrow
-      enough for their text or images to be cut off.
-    */
-
-    @media (max-width:1150px){
-      .features-grid{
-        grid-template-columns:repeat(2, minmax(0,1fr));
-      }
-
-      .feature-cover-title{
-        font-size:clamp(30px, 4vw, 44px);
-      }
-
-      .psychologist-cover-title{
-        font-size:clamp(34px, 5vw, 50px);
-      }
-    }
-
-    @media (max-width:640px){
-      .features-grid{
-        grid-template-columns:1fr;
-      }
-
-      .feature-cover-title{
-        font-size:clamp(30px, 9vw, 44px);
-      }
-
-      .psychologist-cover-title{
-        font-size:clamp(34px, 10vw, 50px);
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -203,50 +66,134 @@
     <article class="lead-feature-card">
 
       <a
-        class="lead-feature-visual guardian-media"
-        href="https://www.theguardian.com/books/2026/sep/27/does-avoiding-misery-make-you-happy"
+        class="lead-feature-visual nbic-media"
+        href="https://nextbigideaclub.com/magazine/behavioral-economist-explains-happiness-hard-bookbite/61496/"
         target="_blank"
         rel="noopener"
-        aria-label="Read Does avoiding misery make you happy in The Guardian"
+        aria-label="Read and listen to A Behavioral Economist Explains Why Happiness Is So Hard"
       >
-        <span class="lead-publication">The Guardian</span>
-        <span class="lead-series">The big idea</span>
+        <img
+          src="https://cdn.nextbigideaclub.com/wp-content/uploads/2026/10/02094534/loewensteinfeatured.jpg"
+          alt="A Behavioral Economist Explains Why Happiness Is So Hard"
+        >
 
-        <span class="lead-cover-title">
-          Does avoiding misery make you happy?
-        </span>
-
-        <span class="lead-cover-subtitle">
-          It might seem like self-preservation, but the results aren’t necessarily what you’d expect.
-        </span>
+        <span class="nbic-badge">Book Bite · Read + Listen</span>
       </a>
 
       <div class="lead-feature-content">
-        <div class="feature-type">Latest featured article</div>
+        <div class="feature-type">New featured Book Bite</div>
 
-        <h2>Does Avoiding Misery Make You Happy?</h2>
+        <h2>A Behavioral Economist Explains Why Happiness Is So Hard</h2>
 
         <p>
-          George Loewenstein examines how efforts to avoid fear, rejection,
-          regret, and other forms of misery can constrict our lives—and
-          sometimes make us more miserable.
+          George Loewenstein shares five key insights from
+          <em>The Opposite of Happiness</em>, exploring why negative emotions
+          dominate our lives, how misery feeds on itself, and what our bad
+          feelings reveal about human nature.
         </p>
 
-        <div class="feature-meta">September 27, 2026</div>
+        <div class="feature-meta">October 2, 2026</div>
 
         <a
           class="feature-button lead-feature-button"
-          href="https://www.theguardian.com/books/2026/sep/27/does-avoiding-misery-make-you-happy"
+          href="https://nextbigideaclub.com/magazine/behavioral-economist-explains-happiness-hard-bookbite/61496/"
           target="_blank"
           rel="noopener"
         >
-          Read in The Guardian →
+          Read &amp; Listen →
         </a>
       </div>
 
     </article>
 
     <section class="features-grid" aria-label="Featured conversations and writing">
+
+      <article class="feature-card">
+
+        <a
+          class="feature-media photo-media"
+          href="https://www.theguardian.com/books/2026/sep/27/does-avoiding-misery-make-you-happy"
+          target="_blank"
+          rel="noopener"
+          aria-label="Read Does avoiding misery make you happy in The Guardian"
+        >
+          <img
+            src="https://i.guim.co.uk/img/media/28f6cc74df0276d133724551507dca147e0831a9/161_0_1530_1224/master/1530.jpg?crop=none&amp;dpr=1&amp;s=none&amp;width=465"
+            alt="Illustration for The Guardian article Does avoiding misery make you happy"
+          >
+
+          <span class="media-label guardian-label">
+            The Guardian · The big idea
+          </span>
+        </a>
+
+        <div class="feature-content">
+          <div class="feature-type">Featured article</div>
+
+          <h2>Does Avoiding Misery Make You Happy?</h2>
+
+          <p>
+            Efforts to avoid fear, rejection, regret, and other forms of
+            misery can constrict our lives and sometimes make us more miserable.
+          </p>
+
+          <div class="feature-meta">September 27, 2026</div>
+
+          <a
+            class="feature-button"
+            href="https://www.theguardian.com/books/2026/sep/27/does-avoiding-misery-make-you-happy"
+            target="_blank"
+            rel="noopener"
+          >
+            Read in The Guardian →
+          </a>
+        </div>
+
+      </article>
+
+      <article class="feature-card">
+
+        <a
+          class="feature-media photo-media"
+          href="https://www.vogue.com/article/the-opposite-of-happiness-excerpt"
+          target="_blank"
+          rel="noopener"
+          aria-label="Read Why Does Rejection Hurt So Much in Vogue"
+        >
+          <img
+            src="https://assets.vogue.com/photos/6ab932ffc91ee4223dbae67e/master/w_2560%2Cc_limit/640266061"
+            alt="Georges Seurat painting featured with the Vogue rejection excerpt"
+          >
+
+          <span class="media-label vogue-label">
+            Vogue · Book excerpt
+          </span>
+        </a>
+
+        <div class="feature-content">
+          <div class="feature-type">Featured book excerpt</div>
+
+          <h2>Why Does Rejection Hurt So Much?</h2>
+
+          <p>
+            George Loewenstein examines why rejection feels like physical
+            pain, damages self-esteem, and can remain emotionally vivid long
+            after it occurs.
+          </p>
+
+          <div class="feature-meta">September 28, 2026</div>
+
+          <a
+            class="feature-button"
+            href="https://www.vogue.com/article/the-opposite-of-happiness-excerpt"
+            target="_blank"
+            rel="noopener"
+          >
+            Read in Vogue →
+          </a>
+        </div>
+
+      </article>
 
       <article class="feature-card">
 
@@ -299,14 +246,8 @@
           aria-label="Read Bad Feelings by Derek Thompson and George Loewenstein"
         >
           <span class="feature-publication">Derek Thompson</span>
-
-          <span class="feature-cover-title">
-            Bad Feelings
-          </span>
-
-          <span class="feature-cover-label">
-            Featured essay
-          </span>
+          <span class="feature-cover-title">Bad Feelings</span>
+          <span class="feature-cover-label">Featured essay</span>
         </a>
 
         <div class="feature-content">
@@ -398,8 +339,8 @@
           <h2>Jealousy</h2>
 
           <p>
-            George Loewenstein explores jealousy, confirmation bias, and
-            the ways fear of losing someone can become self-fulfilling.
+            George Loewenstein explores jealousy, confirmation bias, and the
+            ways fear of losing someone can become self-fulfilling.
           </p>
 
           <div class="feature-meta">September 24, 2026</div>
@@ -419,10 +360,8 @@
     </section>
 
     <aside class="features-upcoming">
-
       <div>
         <div class="kicker">More coming soon</div>
-
         <h2>More conversations and writing</h2>
 
         <p>
@@ -432,7 +371,6 @@
       </div>
 
       <div class="features-upcoming-mark" aria-hidden="true">♪</div>
-
     </aside>
 
   </div>
